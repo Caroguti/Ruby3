@@ -21,7 +21,7 @@ api_data = request_met(url,api_key)
 def build_web_page(data)
     page_content="<html>\n\t<head>\n\t</head>\n\t<body>\n\t\t<ul>\n"
     data["photos"].each do |photo|
-      page_content=page_content+"\t\t\t <li><img src=#{photo["img_src"]}></li>"
+      page_content=page_content+"\t\t\t <li><img src=#{photo["img_src"]}></li>\n"
     end
     page_content=page_content+"\t\t</ul>\n</body>\n</html>\n"
 
